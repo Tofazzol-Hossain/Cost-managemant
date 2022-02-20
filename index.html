@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CDN link  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- CSS link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Money Counter</title>
+</head>
+<!-- Header Section  -->
+<header>
+    <h1 class="text-center">Money Counter</h1>
+</header>
+
+<body>
+    <main class="container">
+        <div class="row gx-5 ">
+            <div class="col-sm-12 col-lg-6">
+                <div>
+                    <img style="height: 100%; width: 50%;" src="cover.jpg" alt="">
+                </div>
+            </div>
+            <!-- calculate section  -->
+            <div class="col-sm-12 col-lg-6 calculate-section">
+                <div class="input-section text-center">
+                    <!-- Income  -->
+                    <h4 class="p-2">Income</h4>
+                    <p>Income: <input id="total-income" class="inputs border-0 rounded" type="text"
+                            placeholder="Enter Your Total Income">
+                    </p>
+                    <div class="notify-section" id="income-error">
+                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
+                    </div>
+                    <!-- Expences -->
+                    <h4 class="p-2">Expences</h4>
+                    <!-- Food Expence -->
+                    <p>Food: <input id="food-input" class="inputs border-0 rounded " type="text"
+                            placeholder="Enter Your Total Food Cost">
+                    </p>
+                    <!-- Rent Expence -->
+                    <p>Rent: <input id="rent-input" class="inputs border-0 rounded " type="text"
+                            placeholder="Enter Your Total Rent">
+                    </p>
+                    <!-- Clothes Expence -->
+                    <p>Clothes: <input id="clothes-input" class="inputs border-0 rounded " type="text"
+                            placeholder="Enter Your Total Clothes Cost">
+                    </p>
+                    <div class="notify-section" id="calculate-error">
+                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
+                    </div>
+                    <!-- calculate Button -->
+                    <button id="calculate-button" class="calculate-button rounded border-0">Calculate</button>
+                    <!-- Total Expence showing -->
+                    <h4 class="p-2">Total Expence: <span id="total-expence">00</span></h4>
+                    <!-- Balance -->
+                    <h4>Balance: <span id="balance">00</span></h4>
+                    <!-- Save With Button -->
+                    <p class="p-2">Save: <input id="saving-percentage" class="saving-input border-0 rounded" type="text"
+                            placeholder="Eneter Amount"> %
+                        <button id="saving-btn" class="saving-button border-0 rounded">Save</button>
+                    </p>
+                    <div class="notify-section" id="saving-error">
+                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
+                    </div>
+                    <!-- Saving Amount -->
+                    <h4 class="p-2">Saving Amount: <span id="saving-amount">00</span></h4>
+                    <!-- Remaing Balance -->
+                    <h4 class="p-2"> Remaing Balance: <span id="remaining-balance">2500</span></h4>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
