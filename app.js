@@ -11,17 +11,35 @@ function getAllExpanse() {
 }
 
 function doEmptyInput(id) {
-    document.getElementById(id).innerText = '';
+    document.getElementById(id).value = '';
 }
 
 document
     .getElementById('calculate-button')
     .addEventListener('click', function () {
+        document.getElementById('calculate-error').style.display = 'none';
         const totalIncome = getValue('total-income');
         const totalExpanse = getAllExpanse();
-        const balance = totalIncome - totalExpanse;
-        document.getElementById('total-expence').innerText = totalExpanse;
-        document.getElementById('balance').innerText = balance;
+
+        if (isNaN(totalIncome) || isNaN(totalExpanse)) {
+            document.getElementById('calculate-error').style.display = 'block';
+        } else {
+            if (totalIncome < totalExpanse) {
+                document.getElementById('income-error').style.display = 'block';
+            } else {
+                const balance = totalIncome - totalExpanse;
+
+                document.getElementById('total-expence').innerText =
+                    totalExpanse;
+                document.getElementById('balance').innerText = balance;
+
+                doEmptyInput('food-input');
+                doEmptyInput('rent-input');
+                doEmptyInput('clothes-input');
+
+                document.getElementById('income-error').style.display = 'none';
+            }
+        }
     });
 
 document.getElementById('saving-btn').addEventListener('click', function () {
@@ -35,4 +53,7 @@ document.getElementById('saving-btn').addEventListener('click', function () {
 
     document.getElementById('remaining-balance').innerText =
         balance - savingAmount;
+
+    doEmptyInput('saving-percentage');
+    doEmptyInput('total-income');
 });

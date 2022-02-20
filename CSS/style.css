@@ -1,48 +1,63 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+	font-family: 'Roboto', sans-serif;
 }
 
-.calculate-section{
-    background-color: #ebeaea;
+.calculate-section {
+	background-color: #ebeaea;
 }
 
-.inputs{
-    height: 44px;
-    width: 229px;
-    background-color: #d8d8d8;
-
+.inputs {
+	height: 44px;
+	width: 229px;
+	background-color: #d8d8d8;
 }
 
 .notify {
-    color: #fff;
-    text-align: center;
-    margin: 0 auto;
-    background: #222436;
-    margin-top: 20px;
-    border-radius: 15px;
-    padding: 5px 20px;
-    display: none;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	background: #222436;
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 5px 20px;
 }
 
-.notify-section{
-    width: 35%;
-    margin: 0 auto;
+#calculate-error {
+	display: none;
 }
 
-.calculate-button{
-    padding: 14px 57px;
-    background-color: #59A5FF;
+#saving-error {
+	display: none;
 }
-.saving-input{
-    height: 44px;
-    width: 132px;
-    background-color: #DCDCDC;
+
+#income-error {
+	display: none;
 }
-.saving-button{
-    height: 44px;
-    width: 150px;
-    background-color: #59A5FF;
+
+.notify-section {
+	width: 35%;
+	margin: 0 auto;
+}
+
+.calculate-button {
+	padding: 14px 57px;
+	background-color: #59a5ff;
+}
+.saving-input {
+	height: 44px;
+	width: 132px;
+	background-color: #dcdcdc;
+}
+.saving-button {
+	height: 44px;
+	width: 150px;
+	background-color: #59a5ff;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }

@@ -13,20 +13,18 @@
     <!-- CSS link  -->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <title>Money Counter</title>
+    <title>Money Managemant</title>
 </head>
 <!-- Header Section  -->
 <header>
-    <h1 class="text-center">Money Counter</h1>
+    <h1 class="text-center">Money Managemant</h1>
 </header>
 
 <body>
     <main class="container">
         <div class="row gx-5 ">
             <div class="col-sm-12 col-lg-6">
-                <div>
-                    <img style="height: 100%; width: 50%;" src="cover.jpg" alt="">
-                </div>
+                <img class="cover-image" src="cover.jpg" alt="">
             </div>
             <!-- calculate section  -->
             <div class="col-sm-12 col-lg-6 calculate-section">
@@ -37,7 +35,7 @@
                             placeholder="Enter Your Total Income">
                     </p>
                     <div class="notify-section" id="income-error">
-                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
+                        <p id="notify-faild" class="notify">❌ Your income getting lower. Please reduce and try again</p>
                     </div>
                     <!-- Expences -->
                     <h4 class="p-2">Expences</h4>
@@ -54,7 +52,7 @@
                             placeholder="Enter Your Total Clothes Cost">
                     </p>
                     <div class="notify-section" id="calculate-error">
-                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
+                        <p id="notify-faild" class="notify">❌ Expence feild can not be empty or negative value</p>
                     </div>
                     <!-- calculate Button -->
                     <button id="calculate-button" class="calculate-button rounded border-0">Calculate</button>
@@ -73,7 +71,7 @@
                     <!-- Saving Amount -->
                     <h4 class="p-2">Saving Amount: <span id="saving-amount">00</span></h4>
                     <!-- Remaing Balance -->
-                    <h4 class="p-2"> Remaing Balance: <span id="remaining-balance">2500</span></h4>
+                    <h4 class="p-2"> Remaing Balance: <span id="remaining-balance">00</span></h4>
                 </div>
             </div>
         </div>
