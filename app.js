@@ -1,5 +1,10 @@
 function getValue(id) {
-    return parseFloat(document.getElementById(id).value);
+    const inputValue = parseFloat(document.getElementById(id).value);
+    if (inputValue < 0) {
+        document.getElementById(id + '-error').style.display = 'block';
+    } else {
+        return inputValue;
+    }
 }
 
 function getAllExpanse() {
@@ -21,23 +26,31 @@ document
         const totalIncome = getValue('total-income');
         const totalExpanse = getAllExpanse();
 
-        if (isNaN(totalIncome) || isNaN(totalExpanse)) {
-            document.getElementById('calculate-error').style.display = 'block';
+        if (isNaN(totalIncome)) {
+            document.getElementById('income-error').style.display = 'block';
         } else {
-            if (totalIncome < totalExpanse) {
-                document.getElementById('income-error').style.display = 'block';
-            } else {
-                const balance = totalIncome - totalExpanse;
-
-                document.getElementById('total-expence').innerText =
-                    totalExpanse;
-                document.getElementById('balance').innerText = balance;
-
-                doEmptyInput('food-input');
-                doEmptyInput('rent-input');
-                doEmptyInput('clothes-input');
-
+            if (isNaN(totalIncome) || isNaN(totalExpanse)) {
                 document.getElementById('income-error').style.display = 'none';
+                document.getElementById('calculate-error').style.display =
+                    'block';
+            } else {
+                if (totalIncome < totalExpanse) {
+                    document.getElementById('income-error').style.display =
+                        'block';
+                } else {
+                    const balance = totalIncome - totalExpanse;
+
+                    document.getElementById('total-expence').innerText =
+                        totalExpanse;
+                    document.getElementById('balance').innerText = balance;
+
+                    doEmptyInput('food-input');
+                    doEmptyInput('rent-input');
+                    doEmptyInput('clothes-input');
+
+                    document.getElementById('income-error').style.display =
+                        'none';
+                }
             }
         }
     });

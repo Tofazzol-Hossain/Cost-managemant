@@ -13,11 +13,11 @@
     <!-- CSS link  -->
     <link rel="stylesheet" href="CSS/style.css">
 
-    <title>Money Managemant</title>
+    <title>Money Counter</title>
 </head>
 <!-- Header Section  -->
 <header>
-    <h1 class="text-center">Money Managemant</h1>
+    <h1 class="text-center">Money Counter</h1>
 </header>
 
 <body>
@@ -31,28 +31,35 @@
                 <div class="input-section text-center">
                     <!-- Income  -->
                     <h4 class="p-2">Income</h4>
-                    <p>Income: <input id="total-income" class="inputs border-0 rounded" type="text"
+                    <p>Income: <input id="total-income" class="inputs border-0 rounded" type="number"
                             placeholder="Enter Your Total Income">
                     </p>
+                    <p id="total-income-error">Erorr</p>
                     <div class="notify-section" id="income-error">
-                        <p id="notify-faild" class="notify">❌ Your income getting lower. Please reduce and try again</p>
+                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
                     </div>
                     <!-- Expences -->
                     <h4 class="p-2">Expences</h4>
                     <!-- Food Expence -->
-                    <p>Food: <input id="food-input" class="inputs border-0 rounded " type="text"
+                    <p>Food: <input id="food-input" class="inputs border-0 rounded " type="number"
                             placeholder="Enter Your Total Food Cost">
                     </p>
+                    <p id="food-input-error">Erorr</p>
+
                     <!-- Rent Expence -->
-                    <p>Rent: <input id="rent-input" class="inputs border-0 rounded " type="text"
+                    <p>Rent: <input id="rent-input" class="inputs border-0 rounded " type="number"
                             placeholder="Enter Your Total Rent">
                     </p>
+                    <p id="rent-input-error">Erorr</p>
+
                     <!-- Clothes Expence -->
-                    <p>Clothes: <input id="clothes-input" class="inputs border-0 rounded " type="text"
+                    <p>Clothes: <input id="clothes-input" class="inputs border-0 rounded " type="number"
                             placeholder="Enter Your Total Clothes Cost">
                     </p>
+                    <p id="clothes-input-error">Erorr</p>
+
                     <div class="notify-section" id="calculate-error">
-                        <p id="notify-faild" class="notify">❌ Expence feild can not be empty or negative value</p>
+                        <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
                     </div>
                     <!-- calculate Button -->
                     <button id="calculate-button" class="calculate-button rounded border-0">Calculate</button>
@@ -61,10 +68,11 @@
                     <!-- Balance -->
                     <h4>Balance: <span id="balance">00</span></h4>
                     <!-- Save With Button -->
-                    <p class="p-2">Save: <input id="saving-percentage" class="saving-input border-0 rounded" type="text"
-                            placeholder="Eneter Amount"> %
+                    <p class="p-2">Save: <input id="saving-percentage" class="saving-input border-0 rounded"
+                            type="number" placeholder="Eneter Amount"> %
                         <button id="saving-btn" class="saving-button border-0 rounded">Save</button>
                     </p>
+                    <p id="saving-percentage-error">Erorr</p>
                     <div class="notify-section" id="saving-error">
                         <p id="notify-faild" class="notify">❌ Eneter a valid amount and try again</p>
                     </div>
