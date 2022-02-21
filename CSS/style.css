@@ -1,7 +1,14 @@
+/* Google font  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 body {
 	font-family: 'Roboto', sans-serif;
+}
+/* Image  */
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .calculate-section {
@@ -24,27 +31,18 @@ body {
 	padding: 5px 20px;
 }
 
-#calculate-error {
-	display: none;
-}
-
-#saving-error {
-	display: none;
-}
-
-#income-error {
-	display: none;
-}
-
 .notify-section {
 	width: 35%;
 	margin: 0 auto;
 }
-
+/* caltulate button style  */
 .calculate-button {
 	padding: 14px 57px;
 	background-color: #59a5ff;
 }
+
+/* saving section style */
+
 .saving-input {
 	height: 44px;
 	width: 132px;
@@ -56,16 +54,14 @@ body {
 	background-color: #59a5ff;
 }
 
-.cover-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
+/* Error style  */
+#income-error,
+#calculate-error,
 #total-income-error,
 #food-input-error,
 #rent-input-error,
 #clothes-input-error,
+#saving-error,
 #saving-percentage-error {
 	display: none;
 }
